@@ -266,23 +266,6 @@ if ($mode == 'manage') {
     $storefront = Tygh::$app['storefront'];
 
     $available_themes = fn_get_available_themes($storefront->theme_name);
-    
-    //delete empty themes
-    foreach ($available_themes['repo'] as $theme_name => $theme){
-    	$theme_path = '/app/www/var/themes_repository/'.$theme_name;
-    	$theme_files = scandir($theme_path);
-    	
-        $is_exist_manifest = false;
-        foreach($theme_files as $file_name){
-        	if($file_name == 'manifest.json'){
-        		$is_exist_manifest = true;
-        	}
-        }
-        
-    	if($is_exist_manifest == false){ 
-    		unset($available_themes['repo'][$theme_name]);
-    	}
-    }
 
     if (!empty($available_themes['repo']) && !empty($available_themes['installed'])) {
         $available_themes['repo'] = array_diff_key($available_themes['repo'], $available_themes['installed']);
