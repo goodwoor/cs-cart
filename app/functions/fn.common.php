@@ -1541,6 +1541,8 @@ function fn_get_available_themes($theme_name)
                 $themes_list[$type][$v] = json_decode($manifest_content, true);
             } elseif ($manifest = $theme->getContentPath(THEME_MANIFEST_INI, Themes::CONTENT_FILE, $dir_type)) {
                 $themes_list[$type][$v] = parse_ini_file($manifest[$dir_type]);
+            } else { 
+                continue;
             }
 
             if ($screenshot = $theme->getContentPath('customer_screenshot.png', Themes::CONTENT_FILE, $dir_type)) {
