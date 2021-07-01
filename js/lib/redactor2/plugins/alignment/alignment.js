@@ -10,6 +10,14 @@
 					"align-center": "Align Center",
 					"align-right": "Align Right",
 					"align-justify": "Align Justify",
+				},
+
+				ru: {
+    				"align": "Выравнивание",
+					"align-left": "Выравнивание по левому краю",
+					"align-center": "Выравнивание по центру",
+					"align-right": "Выравнивание по правому краю",
+					"align-justify": "Выравнивание по ширине"
 				}
 			},
 			init: function()

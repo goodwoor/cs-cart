@@ -3,6 +3,22 @@
 	$.Redactor.prototype.fontcolor = function()
 	{
 		return {
+			langs: {
+				en: {
+					"text color": "Text Color",
+					"text": "Text",
+					"highlight": "Highlight",
+					"none": "None"
+				},
+				
+				ru: {
+					"text color": "Цвет текста",
+					"text": "Текст",
+					"highlight": "Выделение",
+					"none": "Ничто"
+				}
+			
+			},			
 			init: function()
 			{
 				var colors = [
@@ -15,7 +31,7 @@
 				];
 
 
-				var $button = this.button.add('fontcolor', 'Text Color');
+				var $button = this.button.add('fontcolor', this.lang.get('text color'));
 				this.button.setIcon($button, '<i class="re-icon-fontcolor"></i>');
 
 				var $dropdown = this.button.addDropdown($button);
@@ -23,8 +39,8 @@
 				$dropdown.width(242);
 
 				var $selector = $('<div style="overflow: hidden; text-align: center;">');
-				var $selectorText = $('<span rel="text" class="re-dropdown-box-selector-font" style="background: #eee; float: left; padding: 8px 0; cursor: pointer; font-size: 12px; width: 50%;">Text</span>');
-				var $selectorBack = $('<span rel="back" class="re-dropdown-box-selector-font" style="float: left; padding: 8px 0; cursor: pointer; font-size: 12px; width: 50%;">Highlight</span>');
+				var $selectorText = $('<span rel="text" class="re-dropdown-box-selector-font" style="background: #eee; float: left; padding: 8px 0; cursor: pointer; font-size: 12px; width: 50%;">' + this.lang.get('text') + '</span>');
+				var $selectorBack = $('<span rel="back" class="re-dropdown-box-selector-font" style="float: left; padding: 8px 0; cursor: pointer; font-size: 12px; width: 50%;">' + this.lang.get('highlight') + '</span>'); 
 
 				$selector.append($selectorText);
 				$selector.append($selectorBack);
