@@ -16,7 +16,20 @@
 					"delete-column": "Delete column",
 					"delete-row": "Delete row",
 					"delete-table": "Delete table"
-				}
+				},
+				ru: {
+					"table": "Таблица",
+					"insert-table": "Вставить таблицу",
+					"insert-row-above": "Вставить строку сверху",
+					"insert-row-below": "Вставить строку снизу",
+					"insert-column-left": "Вставить стобец слева",
+					"insert-column-right": "Вставить столбец справа",
+					"add-head": "Добавить заголовок",
+					"delete-head": "Удалить заголовок",
+					"delete-column": "Удалить столбец",
+					"delete-row": "Удалить строку",
+					"delete-table": "Удалить таблицу"
+				}				
 			},
 			init: function()
 			{

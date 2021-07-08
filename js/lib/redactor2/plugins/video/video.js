@@ -9,6 +9,10 @@
 				en: {
 					"video": "Video",
 					"video-html-code": "Video Embed Code or Youtube/Vimeo Link"
+				},
+				ru: {
+					"video": "Видео",
+					"video-html-code": "Код для встраивания видео или ссылка на Youtube/Vimeo"
 				}
 			},
 			getTemplate: function()
